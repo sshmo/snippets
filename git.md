@@ -26,3 +26,6 @@
 # Delete a local repository
     
     Delete the .git directory in the root-directory of your repository to delete the git-related information (branches, versions).
+
+# Git refusing to merge unrelated histories
+    --allow-unrelated-histories
