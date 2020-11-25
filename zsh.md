@@ -48,6 +48,8 @@
 
 [Install Ubuntu on Windows 10](https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview)
 
+[Python for web development on Windows](https://docs.microsoft.com/en-us/windows/python/web-frameworks)
+
 **location of zshrc:**
 C:\Users\USERNAME\AppData\Local\Packages\{DIST}\LocalState\rootfs\home\{LINUXUSER}\
 
