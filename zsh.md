@@ -35,3 +35,6 @@
 	export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
 	source /home/shab/.local/bin/virtualenvwrapper.sh
 	export VIRTUAL_ENV_DISABLE_PROMPT=
+	
+# Z for win 10
+	[zsh and Oh My Zsh in Windows 10](https://www.maketecheasier.com/install-zsh-and-oh-my-zsh-windows10/)
