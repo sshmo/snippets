@@ -15,6 +15,11 @@
 	#robbyrussell
 	#gnzh
 	#af-magic
+	
+# Add the bin folder to $PATH before the plugins load
+
+[zsh-virtualenv-setup.md](https://gist.github.com/dixneuf19/a398c08f00aac24609c3cc44c29af1f0#file-zsh-virtualenv-setup-md)
+	PATH=$HOME/.local/bin:$PATH
 
 # plugins
 	https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/
@@ -29,6 +34,7 @@
 		#colorize
 
 # Python Environment Handling
+
 	export WORKON_HOME=$HOME/.venvs
 	export PROJECT_HOME=$HOME/Devel
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
@@ -47,7 +53,7 @@ C:\Users\USERNAME\AppData\Local\Packages\{DIST}\LocalState\rootfs\home\{LINUXUSE
     {LINUXUSER} is the user for which you are looking for the .bashrc
 **Install python3**
 sudo apt update && sudo apt upgrade
-sudo apt upgrade python3
-sudo apt install python3-pip
+sudo apt upgrade python3 python3-pip
+pip3 install --user virtualenv virtualenvwrappe
 
 
