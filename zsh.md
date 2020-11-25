@@ -44,4 +44,10 @@
 C:\Users\USERNAME\AppData\Local\Packages\{DIST}\LocalState\rootfs\home\{LINUXUSER}\
 
     {DIST} is equal to CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc
-    {LINUXUSER} is the user for which you are looking for the .bashrc 
+    {LINUXUSER} is the user for which you are looking for the .bashrc
+**Install python3**
+sudo apt update && sudo apt upgrade
+sudo apt upgrade python3
+sudo apt install python3-pip
+
+
