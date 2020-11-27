@@ -5,12 +5,18 @@
 
 # 5 Steps for Code Changes Only on Git Branch and Merge to Master Once Done
     ['5 Steps for Code Changes Only on Git Branch and Merge to Master Once Done'](https://www.thegeekstuff.com/2019/03/git-create-dev-branch-and-merge/)
+
 # Remove directory/file from git but not delete it from the filesystem (local)
     git rm --cached filename
     git rm -r --cached myFolder
     echo 'myFolder' >> .gitignore
 
 # Set a new remote and push
+
+    # if the folder is empty:
+    git clone https://github.com/user/repo.git
+
+
     git remote add origin https://github.com/user/repo.git
 
     # Verify new remote
