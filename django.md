@@ -1,3 +1,17 @@
+# Start a Project.
+
+    # Start a Project
+    django-admin startproject <project name>
+
+    # cd to <project name>
+    cd <project name>
+
+    # Create the application
+    python manage.py startapp <app name>
+
+    # Start using the files.
+
+
 # How to restart:
     You are trying to add a non-nullable field 'bidder' to bids without a default; we can't do that (the database needs something to populate existing rows).
 

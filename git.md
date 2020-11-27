@@ -1,3 +1,6 @@
+# Show git configs
+    cat .git/config
+
 # Pull new remote branch:
     git checkout -b other-branch
     git fetch origin other-branch
@@ -15,8 +18,11 @@
 
     # if the folder is empty:
     git clone https://github.com/user/repo.git
+    git config user.name user_name
+    git config user.email user_email
 
 
+    # if git init or folder is already a git repo
     git remote add origin https://github.com/user/repo.git
 
     # Verify new remote
@@ -35,3 +41,10 @@
 
 # Git refusing to merge unrelated histories
     --allow-unrelated-histories
+    
+
+# When working with others, 
+    #stash local changes before pulling in order to avoid conflict commits.
+    git stash
+    git pull 
+    git stash pop #Reapply my local changes, eventually merge confl
