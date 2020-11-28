@@ -44,6 +44,22 @@
 	
 # Zsh for win 10
 
+[WSL2 consumes massive amounts of RAM and power!!](https://github.com/microsoft/WSL/issues/4166)
+
+**To turn off wsl(Vmmem) > Powershell>
+
+	wsl --shutdown
+
+Configure memory usage with .wslconfig:
+
+	C:\Users\<yourUserName>\.wslconfig
+	
+	# write in .wslconfig:
+	[wsl2]
+	memory=2GB # Limits VM memory in WSL to 2 GB
+	processors=2 # Makes the WSL 2 VM use two virtual processors
+
+
 [zsh and Oh My Zsh in Windows 10](https://www.maketecheasier.com/install-zsh-and-oh-my-zsh-windows10/)
 
 [Install Ubuntu on Windows 10](https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview)
