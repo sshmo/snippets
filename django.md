@@ -28,11 +28,12 @@
 
 # pylint-django
     pip install pylint-django
-    And add to VSC config:
-
-    "python.linting.pylintArgs": [
-        "--load-plugins=pylint_django"
-    ],
+    Edit .vscode/settings.json as following:
+    {    
+        "python.linting.pylintArgs": [
+            "--load-plugins=pylint_django"
+        ],
+    }
 
 # Django [Errno 13] Permission denied
 
