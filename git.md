@@ -48,3 +48,7 @@
     git stash
     git pull 
     git stash pop #Reapply my local changes, eventually merge confl
+
+# Fatal: failed to read object XXX : Permission denied fatal: the remote end hung up unexpectedly (WSL)
+    sudo chown -R <user>: .git
+    chmod -R u+rwX .git
