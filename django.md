@@ -35,7 +35,7 @@
         ],
     }
 
-# Django [Errno 13] Permission denied
+# Django [Errno 13] Permission denied (in WSL)
 
     # ?whoami
     # ?sudo groupadd django
