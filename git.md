@@ -52,3 +52,6 @@
 # Fatal: failed to read object XXX : Permission denied fatal: the remote end hung up unexpectedly (WSL)
     sudo chown -R <user>: .git
     chmod -R u+rwX .git
+
+# Missing or invalid credentials. Error: connect ECONNREFUSED
+    on linux, just add sudo before the command
