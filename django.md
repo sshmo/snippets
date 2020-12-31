@@ -53,3 +53,8 @@
 
 [File Permissions in Linux/Unix with Example](https://www.guru99.com/file-permissions.html)
 
+
+# auth.User.groups: (fields.E304) Reverse accessor for 'User.groups' clashes with reverse accessor for 'User.groups'.
+
+    Add AUTH_USER_MODEL="your app name.User" in settings.py
+
