@@ -51,7 +51,7 @@
     \list or \l: list all databases
     \dt: list all tables in the current database using your search_path
     \dt *.: list all tables in the current database regardless your search_path
-
+    \l+: list all databases and shows the disk usage as well
 
 
 # pip install psycopg2 - error: command 'x86_64-linux-gnu-gcc' failed with exit status 1 [duplicate]
