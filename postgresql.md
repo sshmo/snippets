@@ -34,6 +34,8 @@
     CREATE DATABASE product_db;
 
     CREATE USER product_user WITH PASSWORD 'password';
+    
+    ALTER USER product_user CREATEDB; # for running tests
 
     ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
     ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
@@ -58,5 +60,8 @@
 
     sudo apt install libpq-dev
     pip3 install psycopg2
+  
+# Creating test database for alias 'default'... Got an error creating the test database: permission denied to create database
+  
   
   
