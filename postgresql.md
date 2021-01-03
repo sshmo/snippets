@@ -63,5 +63,6 @@
   
 # Creating test database for alias 'default'... Got an error creating the test database: permission denied to create database
   
-  
+    # In database creation add folloing:
+    ALTER USER product_user CREATEDB; # for running tests
   
