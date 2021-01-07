@@ -18,3 +18,6 @@
     nvm use node
     nvm run node --version
     nvm install-latest-npm
+    
+    # install yarn pkg manager
+    npm install -g yarn
