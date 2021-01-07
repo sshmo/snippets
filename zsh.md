@@ -6,7 +6,7 @@
 	sudo apt install git-core curl fonts-powerline 
 
 # Install oh-my-zsh
-	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh"
+	curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 	default? no
 
 # Themes
