@@ -9,9 +9,11 @@
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Install node
-    # "node" is an alias for the latest version
-    # this will also update node and npm
-    nvm install node 
+    
+    # "node" is an alias for the latest version, this will also update node and npm
+    nvm install node
+    
+    nvm install vx.x.x # install specific version
 
     nvm use node
     nvm run node --version
