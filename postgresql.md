@@ -3,8 +3,9 @@
   [Ubuntu 20.04 PostgreSQL Installation](https://linuxconfig.org/ubuntu-20-04-postgresql-installation)
   
     sudo apt-get update
-    (sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib)
-
+    
+    sudo apt-get install libpq-dev
+    
     sudo apt install postgresql-client
     which psql
     usr/bin/psql
