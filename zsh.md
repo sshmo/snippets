@@ -78,4 +78,12 @@ C:\Users\USERNAME\AppData\Local\Packages\{DIST}\LocalState\rootfs\home\{LINUXUSE
 	sudo apt upgrade python3 python3-pip
 	pip3 install --user virtualenv virtualenvwrappe
 
-
+# How to fix a corrupt zsh history file
+	
+[How to fix a corrupt zsh history file](https://shapeshed.com/zsh-corrupt-history-file/)
+	
+	cd ~
+	mv .zsh_history .zsh_history_bad
+	strings .zsh_history_bad > .zsh_history
+	fc -R .zsh_history
+	
