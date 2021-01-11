@@ -60,5 +60,5 @@
         README.md
         Please commit your changes or stash them before you merge.
         Aborting
-    git checkout HEAD^ README.md
+    git checkout HEAD README.md
     git push
