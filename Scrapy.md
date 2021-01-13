@@ -29,3 +29,13 @@ Use [Selenium with Scrapy](https://github.com/clemfromspace/scrapy-selenium) ins
     
     def parse_result(self, response):
         print(response.selector.xpath('//title/@text'))
+
+# Install geckodriver in Ubuntu
+Find the [latest version](https://github.com/mozilla/geckodriver/releases) of the driver for your platform and download it. For example:
+
+    wget https://github.com/mozilla/geckodriver/releases/download/v0.28.0/geckodriver-v0.28.0-linux64.tar.gz
+    tar -xvzf geckodriver*
+    chmod +x geckodriver
+    sudo mv geckodriver /usr/bin/
+    
+    
