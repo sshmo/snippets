@@ -24,3 +24,8 @@
 # To delete an index in Elasticsearch:
 
     curl -XDELETE localhost:9200/<index name>
+    
+    # Using elasticsearch module
+    from elasticsearch import Elasticsearch
+    es = Elasticsearch()
+    es.indices.delete(index='test-index', ignore=[400, 404])
