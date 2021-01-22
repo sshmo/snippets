@@ -21,4 +21,6 @@ Node >= 8.10 and npm >= 5.6 is needed => ['npm.md'](https://github.com/sshmo/set
     
     A compiler such as Babel. It lets you write modern JavaScript code that still works in older browsers.
 
+# 'creat-react-app@latest' is not in the npm registry.
 
+    You searched for creat-react-app, not create-react-app. (create)
