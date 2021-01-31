@@ -35,3 +35,15 @@ a few built-ins that would be tempting variable names otherwise:
 
 
 # dir() lists all the attributes of the object passed into it.
+
+# string methods:
+
+    S.capitalize()
+    S.endswith('.xlsx')
+    S.startswith('Oct')
+    S.find('ate')
+    S.lower().endswith('txt')
+    S.strip()
+    
+# A basic rule of thumb is that a comment should explain the why rather than the how (code alone should be sufficient for the how). 
+    
