@@ -119,4 +119,62 @@ Python will throw a RuntimeError:
     ...
     RuntimeError: dictionary changed size during iteration
 
+# functions
 
+# lambda functions:
+
+    # Syntax of Lambda Function – lambda arguments: expression
+    
+    #Simple Lambda Function
+    multiply = lambda a, b : a * b
+    print(multiply(5, 7))
+    
+    #Lambda Function within a normal function
+    def myAdditionFunctionWithLambda(add):
+        return lambda val: val+add
+        
+    square_result=myAdditionFunctionWithLambda(2)
+    print(square_result(5))
+    
+## map()
+
+Takes a function as one of its arguments and the sequence as its second argument and applies the function to each and every element of the sequence.
+
+    Syntax - resulting_map = map(function , sequence)
+
+    #converting Celsius to Fahrenheit
+    Celsius = [40, 33.2, 35.3, 41.8, 30.1]
+    Fahrenheit = list(map(lambda x: (float(9)/5)*x + 32, Celsius))
+    
+map returns an iterator that yields the returened values.
+
+## filter:
+is used to filter out all elements from the list, for which the function returns True.
+
+    # Syntax – filter(function,list)
+    
+    numbers = [0,0,1,2,3,5,6,9,11,23,34,45,50,77]
+    
+    #obtaining the odd numbers from the numbers list
+    odd_numbers = filter(lambda x: x % 2, numbers)
+    print(list(odd_numbers))
+    
+    #obtaining the even numbers from the numbers list
+    even_numbers = filter(lambda x: x % 2 == 0, numbers)
+    print(list(even_numbers))
+
+## reduce
+is used to continuously apply a function logic to the elements of the list.
+Syntax – reduce(function,list)
+
+    from functools import reduce #importing the reduce library
+    
+    counting=reduce(lambda x, y: x+y, range(1,50))
+    print("Sum of numbers 1 to 50 is {}".format(counting))
+    
+    multiplying=reduce(lambda x,y: x*y, [1,5,10])
+    print("Multiplied list result is {}".format(multiplying))
+    
+    largest_in_list = lambda a,b: a if (a > b) else b
+    largest=reduce(largest_in_list, [100,101,155,122,210])
+    print("Largest element of list is {}".format(largest)
