@@ -15,3 +15,16 @@
 # update file with sudo
 
     sudo getit <filepath>
+    
+    
+# See disk usage detail
+
+open the usage app
+
+# Move a folder
+    
+    mv source target
+
+# Show Hidden Files
+
+    ctrl + H
