@@ -41,7 +41,12 @@
 	export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
 	source /home/shab/.local/bin/virtualenvwrapper.sh
 	export VIRTUAL_ENV_DISABLE_PROMPT=
-	
+
+# Set Zsh as default shell
+
+	chsh -s $(which zsh)
+
+
 # Zsh for win 10
 
 [WSL2 consumes massive amounts of RAM and power!!](https://github.com/microsoft/WSL/issues/4166)
