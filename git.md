@@ -34,6 +34,9 @@
     git push --set-upstream origin master
     git push
 
+# Delete local branch
+
+    git branch -d <branch_name>
 
 # Delete a local repository
     
