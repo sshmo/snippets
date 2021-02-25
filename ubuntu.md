@@ -44,7 +44,7 @@ open the usage app
 # Help on a command:
     man <command>
     
-# viewing files:
+# Viewing files:
     file <filename> # shows the type
     cat <filename> # shows the whole file in on place
     more <filename> # shows the file page by page
@@ -52,23 +52,23 @@ open the usage app
     head <filename> # shows first -<number> lines 
     tail <filename> # shows last -<number> lines
 
-# to all processes with detail information:
-
-The state of the process (S): 
-O = running on processor
-S = sleeping
-R = runnable, waiting to run
-Z = zombie, process terminated but parent not available
-T = process stopped
-
-The state of the process (STAT): 
-<: The process is running at high priority.
-N: The process is running at low priority.
-L: The process has pages locked in memory.
-s: The process is a session leader.
-l: The process is multithreaded.
-+: The process is running in the foreground.
+# To view all processes with detail information:
 
     ps -ef --forest
+
+    # The state of the process (S): 
+    # O = running on processor
+    # S = sleeping
+    # R = runnable, waiting to run
+    # Z = zombie, process terminated but parent not available
+    # T = process stopped
+    
     ps l --forest
     
+    # The state of the process (STAT): 
+    # <: The process is running at high priority.
+    # N: The process is running at low priority.
+    # L: The process has pages locked in memory.
+    # s: The process is a session leader.
+    # l: The process is multithreaded.
+    # +: The process is running in the foreground.
