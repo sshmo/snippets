@@ -3,6 +3,28 @@
     sudo add-apt-repository ppa:yannubuntu/boot-repair
     sudo apt-get update
     sudo apt-get install -y boot-repair && boot-repair
+    
+# Extend root partition
+
+Change root partition from live usb disk.
+You can only add space from adjacent free space.
+If swap is in between, delete swap, then extend root then make swap again.
+
+# Recreate swap
+
+Step 1. Format /dev/sda... to be a valid swap 
+    
+    mkswap /dev/sda...
+
+Step 2. Activate the swap by 
+
+    swapon /dev/sda...
+
+Step 3. modify /etc/fstab to make swap start after every boot.  
+
+    sudo gedit /etc/fstab
+    # update UUID received as output of step 1.
+    # https://askubuntu.com/a/540167
 
 # update us.archive to ir.archive
 
