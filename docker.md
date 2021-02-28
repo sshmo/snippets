@@ -35,3 +35,15 @@
     cheat sheet
     https://github.com/lifeeric/docker-cheat-sheet
 
+# Docker Could not resolve 'deb.debian.org'
+set the nameserver by creating file /etc/docker/daemon.json
+
+    {
+        "dns": ["8.8.8.8"]
+    }
+
+then restart docker service:
+
+    $ service docker restart
+
+
