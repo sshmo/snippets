@@ -32,4 +32,8 @@
     # visit localhost:8080 in the browser and use the admin account you just
     # created to login. Enable the example_bash_operator dag in the home page
 
+# Error: Already running on PID ... (or pid file '/opt/airflow/airflow-webserver.pid' is stale)
+
+    cat airflow-webserver.pid | xargs kill
+    rm airflow-webserver.pid
   
