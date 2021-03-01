@@ -30,6 +30,15 @@ Step 3. modify /etc/fstab to make swap start after every boot.
 
     sudo nano /etc/apt/sources.list
     # in  nano ^ == cnrl
+
+# Unable to install “<PACKAGE>”: snap “<PACKAGE>” has “install-snap” change in progress
+    
+    snap changes
+    ...
+    123  Doing   2018-04-28T10:40:11Z  -  Install "foo" snap
+    ...
+    sudo snap abort 123
+    snap install foo
     
 # The following signatures couldn't be verified because the public key is not available: NO_PUBKEY <THE KEY>
 
