@@ -46,4 +46,8 @@ then restart docker service:
 
     $ service docker restart
 
+# “Job for docker.service failed because the control process exited with error code”
+# Unable to docker-compose up any project
 
+    sudo dockerd --debug
+    
