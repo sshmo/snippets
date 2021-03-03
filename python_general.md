@@ -178,3 +178,22 @@ Syntax – reduce(function,list)
     largest_in_list = lambda a,b: a if (a > b) else b
     largest=reduce(largest_in_list, [100,101,155,122,210])
     print("Largest element of list is {}".format(largest)
+
+# Store and load class instances
+    
+    # save
+    joblib.dump(instance, 'file_name.sav')
+    
+    # load
+    instance = joblib.load('file_name.sav')
+
+# Store and load numpy arrays
+    
+    # save
+    np.savetxt('file_name.txt', array, fmt='%d')
+    
+    # load
+    array = np.loadtxt('file_name.txt', dtype = int)
+    
+    
+    
