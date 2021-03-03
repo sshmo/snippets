@@ -181,19 +181,10 @@ Syntax – reduce(function,list)
 
 # Store and load class instances
     
-    # save
-    joblib.dump(instance, 'file_name.sav')
-    
-    # load
-    instance = joblib.load('file_name.sav')
+    joblib.dump(instance, 'file_name.sav') # save
+    instance = joblib.load('file_name.sav') # load
 
 # Store and load numpy arrays
     
-    # save
-    np.savetxt('file_name.txt', array, fmt='%d')
-    
-    # load
-    array = np.loadtxt('file_name.txt', dtype = int)
-    
-    
-    
+    np.save('data.npy', num_arr) # save
+    new_num_arr = np.load('data.npy') # load
