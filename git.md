@@ -65,3 +65,13 @@
         Aborting
     git checkout HEAD README.md
     git push
+
+# How do I fix a Git detached head?
+
+    # If you want to delete your changes associated with the detached HEAD
+    git checkout -- path/to/foo
+    
+    # If you want to keep your changes associated with the detached HEAD
+    git branch tmp
+    git checkout -- path/to/foo
+    git merge tmp
