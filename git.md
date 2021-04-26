@@ -75,3 +75,8 @@
     git branch tmp
     git checkout -- path/to/foo
     git merge tmp
+
+
+# How to cancel a local git commit
+
+    git reset HEAD~1
