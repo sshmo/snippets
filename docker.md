@@ -1,23 +1,23 @@
-# Install Docker Engine on Ubuntu
+## Install Docker Engine on Ubuntu
 
 [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
-# Post-installation steps for Linux
+## Post-installation steps for Linux
 
 [Post-installation steps for Linux](https://docs.docker.com/engine/install/linux-postinstall/)
 
-# WSL2: docker: Error response from daemon: cgroups: cannot find cgroup mount destination: unknown.
+## WSL2: docker: Error response from daemon: cgroups: cannot find cgroup mount destination: unknown.
 [fix](https://github.com/microsoft/WSL/issues/4189#issuecomment-518277265)
 
-# dockerfile should be "Dockerfile"!
+## dockerfile should be "Dockerfile"!
 
-# Docker image for running the AWS command line interface. 
+## Docker image for running the AWS command line interface. 
     https://github.com/fstab/docker-aws-cli
 
-# Docker-ubuntu
+## Docker-ubuntu
     https://github.com/fstab/docker-ubuntu
 
-# Docker commands
+## Docker commands
 
 [From codegrepper](https://www.codegrepper.com/search.php?q=docker)
     docker ps # current containers
@@ -35,7 +35,7 @@
     cheat sheet
     https://github.com/lifeeric/docker-cheat-sheet
 
-# Docker Could not resolve 'deb.debian.org'
+## Docker Could not resolve 'deb.debian.org'
 set the nameserver by creating file /etc/docker/daemon.json
 
     {
@@ -46,8 +46,19 @@ then restart docker service:
 
     $ service docker restart
 
-# “Job for docker.service failed because the control process exited with error code”
-# Unable to docker-compose up any project
+## “Job for docker.service failed because the control process exited with error code” Unable to docker-compose up any project
 
     sudo dockerd --debug
+    
+## Change docker image installation directory?
+    
+    udo systemctl stop docker
+    sudo gedit /etc/docker/daemon.json
+    {
+        "data-root": /mnt/.../...
+    }
+    sudo mv /var/lib/docker /mnt/.../...
+    sudo systemctl daemon-reload
+    sudo systemctl restart docker
+    docker info|grep "Docker Root Dir"
     
