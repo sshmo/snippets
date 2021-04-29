@@ -103,3 +103,14 @@ open the usage app
     # s: The process is a session leader.
     # l: The process is multithreaded.
     # +: The process is running in the foreground.
+
+# Automount File Systems on Linux
+
+    # Step 1: Get the Name, UUID and File System Type
+    sudo blkid
+    # Step 2: Make a Mount Point For Your Drive
+    sudo mkdir /mnt/<name-of-the-drive>
+    Step 3: Edit /etc/fstab File
+    sudo gedit /etc/fstab 
+    #Add UUID=<...>  /mnt/<name-of-the-drive>  ext4  defaults  0  2
+    sudo mount -a
