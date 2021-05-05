@@ -61,4 +61,7 @@ then restart docker service:
     sudo systemctl daemon-reload
     sudo systemctl restart docker
     docker info|grep "Docker Root Dir"
-    
+
+## Clear redis container history
+
+    docker exec -it container-name redis-cli FLUSHALL
