@@ -65,3 +65,7 @@ then restart docker service:
 ## Clear redis container history
 
     docker exec -it container-name redis-cli FLUSHALL
+
+## Remove networks
+
+    docker network prune
