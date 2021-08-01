@@ -114,3 +114,8 @@ open the usage app
     sudo gedit /etc/fstab 
     #Add UUID=<...>  /mnt/<name-of-the-drive>  ext4  defaults  0  2
     sudo mount -a
+
+# delete route
+    
+    sudo ip route show
+    sudo ip route del <ip route>
