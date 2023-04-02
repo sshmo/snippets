@@ -1,7 +1,10 @@
-# Installation
+# PostgreSQL
+
+## Installation
   
   [Ubuntu 20.04 PostgreSQL Installation](https://linuxconfig.org/ubuntu-20-04-postgresql-installation)
-  
+
+``` bash
     sudo apt-get update
     
     sudo apt-get install libpq-dev
@@ -23,15 +26,18 @@
     ss -nlt
     State            Recv-Q            Send-Q                       Local Address:Port                       Peer Address:Port           Process
     LISTEN           0                 128                              127.0.0.1:5432                            0.0.0.0:*
+```
 
-# Create a db
+## Create a db
 
   [How To Use PostgreSQL with your Django Application on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04)
-  
+
+``` bash
     sudo su - postgres
-
     psql
+```
 
+```sql
     CREATE DATABASE product_db;
 
     CREATE USER product_user WITH PASSWORD 'password';
@@ -47,7 +53,9 @@
     /q
 
     exit
+```
 
+``` bash
     # checking a db via localhost
     psql -U someuser -h 127.0.0.1 database
 
@@ -55,15 +63,18 @@
     \dt: list all tables in the current database using your search_path
     \dt *.: list all tables in the current database regardless your search_path
     \l+: list all databases and shows the disk usage as well
+```
 
+## pip install psycopg2 - error: command 'x86_64-linux-gnu-gcc' failed with exit status 1 [duplicate]
 
-# pip install psycopg2 - error: command 'x86_64-linux-gnu-gcc' failed with exit status 1 [duplicate]
-
+``` bash
     sudo apt install libpq-dev
     pip3 install psycopg2
-  
-# Creating test database for alias 'default'... Got an error creating the test database: permission denied to create database
-  
+```
+
+## Creating test database for alias 'default'... Got an error creating the test database: permission denied to create database
+
+```sql  
     # In database creation add folloing:
     ALTER USER product_user CREATEDB; # for running tests
-  
+```

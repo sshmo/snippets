@@ -1,5 +1,6 @@
 # Minimal installation
 
+``` bash
     # airflow needs a home, ~/airflow is the default,
     # but you can lay foundation somewhere else if you prefer
     # (optional)
@@ -36,4 +37,4 @@
 
     cat airflow-webserver.pid | xargs kill
     rm airflow-webserver.pid
-  
+```  

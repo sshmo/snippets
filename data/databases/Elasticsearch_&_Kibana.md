@@ -1,5 +1,8 @@
-# Elasticsearch installation and setup
-    
+# Elasticsearch & Kibana
+
+## Elasticsearch installation and setup
+
+```bash
     # use vpn
     wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.10.1-amd64.deb
     wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.10.1-amd64.deb.sha512
@@ -9,9 +12,11 @@
     sudo update-rc.d elasticsearch defaults 95 10
     sudo -i service elasticsearch start
     sudo -i service elasticsearch stop
-    
-# Kibana installation and setup    
-    
+```
+
+## Kibana installation and setup
+
+```bash
     # use vpn
     wget https://artifacts.elastic.co/downloads/kibana/kibana-7.10.2-amd64.deb
     shasum -a 512 kibana-7.10.2-amd64.deb 
@@ -21,11 +26,11 @@
     sudo -i service kibana start
     sudo -i service kibana stop
 
-# To delete an index in Elasticsearch:
-
+    # To delete an index in Elasticsearch:
     curl -XDELETE localhost:9200/<index name>
     
     # Using elasticsearch module
     from elasticsearch import Elasticsearch
     es = Elasticsearch()
     es.indices.delete(index='test-index', ignore=[400, 404])
+```

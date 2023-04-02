@@ -12,13 +12,12 @@ Then run:
     # more help on chmod:
     man chmod  # (man for manual)
 
-Now you can run the file.py 
- 
+Now you can run the file.py
+
     ./file.py
 
 Unless . (or the parent directory of file.py) is in your PATH variable you need to include ./ before the name (or the full path to the executable).
 perhaps you want the program on your PATH so you can run it at any time
-
 
 ## Do not use these for variable naming
 
@@ -28,18 +27,20 @@ perhaps you want the program on your PATH so you can run it at any time
     
     # To show all builtins:
     dir(__builtins__)
-    
-a few built-ins that would be tempting variable names otherwise: 
+
+a few built-ins that would be tempting variable names otherwise:
 
     dict, id, list,
     min, max, open, 
     range, str, sum, and type.
 
-### dir() lists all the attributes of the object passed into it.
-### A basic rule of thumb is that a comment should explain the why rather than the how (code alone should be sufficient for the how). 
+### dir() lists all the attributes of the object passed into it
 
-# Strings
-## string methods:
+### A basic rule of thumb is that a comment should explain the why rather than the how (code alone should be sufficient for the how)
+
+## Strings
+
+## string methods
 
     S.capitalize()
     S.endswith('.xlsx')
@@ -47,8 +48,8 @@ a few built-ins that would be tempting variable names otherwise:
     S.find('ate')
     S.lower().endswith('txt')
     S.strip()
-    
-# Lists
+
+## Lists
 
 ## Removing items from lists during iteration
 
@@ -57,11 +58,12 @@ a few built-ins that would be tempting variable names otherwise:
         if name not in ['John', 'Paul']:
         names.remove(name)
 
-# Dictionaries
+## Dictionaries
 
-## The .get method of a dictionary will retrieve a value for a key.
+## The .get method of a dictionary will retrieve a value for a key
 
 ## Counter
+
 Performing counting of all members in a collection
 
     import collections
@@ -74,6 +76,7 @@ Performing counting of all members in a collection
     0
 
 ## defaultdict
+
 This class behaves like a dictionary but it also allows for setting the default value of a key to an arbitrary factory. If the default factory is not None, it is initialized and inserted as a value any time a key is missing.
 
     from collections import defaultdict
@@ -85,8 +88,8 @@ This class behaves like a dictionary but it also allows for setting the default 
     >>> print(names_to_bands['Paul'])
     ['Beatles', 'Wings']
 
- ## Dictionary iteration
- 
+## Dictionary iteration
+
     for key in data:
     
     # You can also do a lookup by value, but it is slow. If you find yourself doing this operation often, 
@@ -96,10 +99,10 @@ This class behaves like a dictionary but it also allows for setting the default 
     for key, value in data.items():
     
     for name in sorted(data.keys(), reverse=True):
-    
-# remove a key from a Python dictionary
 
-If key is in the dictionary, remove it and return its value, else return default. 
+## remove a key from a Python dictionary
+
+If key is in the dictionary, remove it and return its value, else return default.
 If default is not given and key is not in the dictionary, a KeyError is raised.
 
     my_dict.pop("key", None) # default : None
@@ -108,8 +111,8 @@ If default is not given and key is not in the dictionary, a KeyError is raised.
         del my_dict['key']
     except KeyError:
         pass
- 
-Python will prevent you from adding to or removing from a dictionary while you are looping over it. 
+
+Python will prevent you from adding to or removing from a dictionary while you are looping over it.
 Python will throw a RuntimeError:
 
     >>> data = {'name': 'Matt'}
@@ -119,9 +122,9 @@ Python will throw a RuntimeError:
     ...
     RuntimeError: dictionary changed size during iteration
 
-# functions
+## functions
 
-# lambda functions:
+## lambda functions
 
     # Syntax of Lambda Function – lambda arguments: expression
     
@@ -135,7 +138,7 @@ Python will throw a RuntimeError:
         
     square_result=myAdditionFunctionWithLambda(2)
     print(square_result(5))
-    
+
 ## map()
 
 Takes a function as one of its arguments and the sequence as its second argument and applies the function to each and every element of the sequence.
@@ -145,10 +148,11 @@ Takes a function as one of its arguments and the sequence as its second argument
     #converting Celsius to Fahrenheit
     Celsius = [40, 33.2, 35.3, 41.8, 30.1]
     Fahrenheit = list(map(lambda x: (float(9)/5)*x + 32, Celsius))
-    
+
 map returns an iterator that yields the returened values.
 
-## filter:
+## filter
+
 is used to filter out all elements from the list, for which the function returns True.
 
     # Syntax – filter(function,list)
@@ -164,6 +168,7 @@ is used to filter out all elements from the list, for which the function returns
     print(list(even_numbers))
 
 ## reduce
+
 is used to continuously apply a function logic to the elements of the list.
 Syntax – reduce(function,list)
 
@@ -177,14 +182,14 @@ Syntax – reduce(function,list)
     
     largest_in_list = lambda a,b: a if (a > b) else b
     largest=reduce(largest_in_list, [100,101,155,122,210])
-    print("Largest element of list is {}".format(largest)
+    print("Largest element of list is {}".format(largest))
 
-# Store and load class instances
-    
+## Store and load class instances
+
     joblib.dump(instance, 'file_name.sav') # save
     instance = joblib.load('file_name.sav') # load
 
-# Store and load numpy arrays
-    
+## Store and load numpy arrays
+
     np.save('data.npy', num_arr) # save
     new_num_arr = np.load('data.npy') # load

@@ -1,90 +1,119 @@
-# Boot repair
+# bash
 
-    sudo add-apt-repository ppa:yannubuntu/boot-repair
-    sudo apt-get update
-    sudo apt-get install -y boot-repair && boot-repair
-    
-# Extend root partition
+## Boot repair
+
+```bash
+sudo add-apt-repository ppa:yannubuntu/boot-repair
+sudo apt-get update
+sudo apt-get install -y boot-repair && boot-repair
+```
+
+## Extend root partition
 
 Change root partition from live usb disk.
 You can only add space from adjacent free space.
 If swap is in between, delete swap, then extend root then make swap again.
 
-# Recreate swap
+## Recreate swap
 
-Step 1. Format /dev/sda... to be a valid swap 
-    
+Step 1. Format /dev/sda... to be a valid swap
+
+```bash
     mkswap /dev/sda...
+```
 
-Step 2. Activate the swap by 
+Step 2. Activate the swap by
 
+```bash
     swapon /dev/sda...
+```
 
-Step 3. modify /etc/fstab to make swap start after every boot.  
+Step 3. modify /etc/fstab to make swap start after every boot.
 
+```bash
     sudo gedit /etc/fstab
     # update UUID received as output of step 1.
     # https://askubuntu.com/a/540167
+```
 
-# update us.archive to ir.archive
+## update us.archive to ir.archive
 
+```bash
     sudo nano /etc/apt/sources.list
     # in  nano ^ == cnrl
+```
 
-# Unable to install “<PACKAGE>”: snap “<PACKAGE>” has “install-snap” change in progress
-    
+## Unable to install “\<PACKAGE>”: snap “\<PACKAGE>” has “install-snap” change in progress
+
+```bash
     snap changes
     ...
     123  Doing   2018-04-28T10:40:11Z  -  Install "foo" snap
     ...
     sudo snap abort 123
     snap install foo
-    
-# The following signatures couldn't be verified because the public key is not available: NO_PUBKEY <THE KEY>
+```
 
+## The following signatures couldn't be verified because the public key is not available: NO_PUBKEY \<THE KEY>
+
+```bash
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys <THE KEY>
+```
 
-# update file with sudo
+## update file with sudo
 
+```bash
     sudo getit <filepath>
-    
-    
-# See disk usage detail
+```
+
+## See disk usage detail
 
 open the usage app
 
-# Move a folder
-    
+## Move a folder
+
+``` bash
     mv source/ target/
     
     # use -i option on cp, mv, rm commands to be asked before overwriting or removing files.
+```
 
-# Show Hidden Files
+## Show Hidden Files
 
-    ctrl + H
+ctrl + H
 
-# Custom keyboard shortcuts:
-    Keyboard Shortcuts window -> scroll down to reach the + button at thev bottom.
+## Custom keyboard shortcuts
 
-# Find in terminal
-    Shift+Ctrl+F
+Keyboard Shortcuts window -> scroll down to reach the + button at thev bottom.
 
-# Having multiple workspaces:
-    Super key, then scroll to empty page, start new workspace
+## Find in terminal
 
-# Help on a command:
+Shift+Ctrl+F
+
+## Having multiple workspaces
+
+Super key, then scroll to empty page, start new workspace
+
+## Help on a command
+
+``` bash
     man <command>
-    
-# Viewing files:
+```
+
+## Viewing files
+
+``` bash
     file <filename> # shows the type
     cat <filename> # shows the whole file in on place
     more <filename> # shows the file page by page
     less <filename> # shows the file page by page
     head <filename> # shows first -<number> lines 
     tail <filename> # shows last -<number> lines
+```
 
-# To view all processes with detail information:
+## To view all processes with detail information
 
+``` bash
     ps -ef --forest
 
     # The state of the process (S): 
@@ -104,7 +133,7 @@ open the usage app
     # l: The process is multithreaded.
     # +: The process is running in the foreground.
 
-# Automount File Systems on Linux
+    ## Automount File Systems on Linux
 
     # Step 1: Get the Name, UUID and File System Type
     sudo blkid
@@ -115,7 +144,8 @@ open the usage app
     #Add UUID=<...>  /mnt/<name-of-the-drive>  ext4  defaults  0  2
     sudo mount -a
 
-# delete route
-    
+    ## delete route
+
     sudo ip route show
     sudo ip route del <ip route>
+```

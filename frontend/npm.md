@@ -1,15 +1,22 @@
-# Using a Node version manager to install Node.js and npm
 
-# Install nvm
+# npm
+
+## Using a Node version manager to install Node.js and npm
+
+## Install nvm
+
+```bash
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
     
     export NVM_DIR="$HOME/.nvm"
     
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
 
-# Install node
-    
+## Install node
+
+```bash
     # "node" is an alias for the latest version, this will also update node and npm
     nvm install node
     
@@ -21,3 +28,4 @@
     
     # install yarn pkg manager
     npm install -g yarn
+```
