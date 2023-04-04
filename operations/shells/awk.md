@@ -1,5 +1,7 @@
 # awk
 
+## Getting started
+
 When you run awk, you specify an awk program that tells awk what to do. The program consists of a series of rules. a rule consists of a pattern followed by an action.
 
 pattern { action }
@@ -7,6 +9,14 @@ pattern { action }
 In an awk rule, either the pattern or the action can be omitted, but not both.
 If the pattern is omitted, then the action is performed for every input line.
 If the action is omitted, the default action is to print all lines that match the pattern (‘{ print $0 }’).
+
+The awk utility reads the input files one line at a time. For each line, awk tries the patterns of each rule. If several patterns match, then several actions execute in the order in which they appear in the awk program. If no patterns match, then no actions run
+
+awk is a line-oriented language. Each rule’s action has to begin on the same line as the pattern. To have the pattern and action on separate lines, you must use backslash continuation; there is no other option
+
+backslash continuation and comments should not mix. As soon as awk sees the ‘#’ that starts a comment, it ignores everything on the rest of the line
+
+You may use backslash continuation to continue a source line. Lines are automatically continued after a comma, open brace, question mark, colon, ‘||’, ‘&&’, do, and else
 
 ## How to Run awk Programs
 
@@ -89,10 +99,28 @@ awk '/This regular expression is too long, so continue it\
  awk '/12/ { print $0 } ; /21/ { print $0 }' data
 ```
 
-## The awk utility reads the input files one line at a time. For each line, awk tries the patterns of each rule. If several patterns match, then several actions execute in the order in which they appear in the awk program. If no patterns match, then no actions run
+## Running awk and gawk
 
-## awk is a line-oriented language. Each rule’s action has to begin on the same line as the pattern. To have the pattern and action on separate lines, you must use backslash continuation; there is no other option
+The way to name the standard input, with all versions of awk, is to use a single, standalone minus sign or dash, ‘-’. For example:
 
-## backslash continuation and comments should not mix. As soon as awk sees the ‘#’ that starts a comment, it ignores everything on the rest of the line
+``` bash
+some_command | awk -f myprog.awk - 
+```
 
-## You may use backslash continuation to continue a source line. Lines are automatically continued after a comma, open brace, question mark, colon, ‘||’, ‘&&’, do, and else
+## Regular expressions
+
+A regular expression in awk is enclosed in slashes (‘/’) ans used in patterns
+
+regexp constant: a regexp is enclosed in slashes, such as /foo/
+
+escape sequences:character sequences beginning with a backslash (‘\’) for both string constants and regexp constants
+
+``` bash
+# matches, or selects, all input records with the uppercase letter ‘J’ 
+awk '$1 ~ /J/' inventory-shipped
+
+# matches, or selects, all input records whose first field does not contain the uppercase letter ‘J’
+awk '$1 !~ /J/' inventory-shipped
+
+# \" : A literal double quote (should be used for string constants only)
+```
