@@ -18,6 +18,8 @@ backslash continuation and comments should not mix. As soon as awk sees the ‘#
 
 You may use backslash continuation to continue a source line. Lines are automatically continued after a comma, open brace, question mark, colon, ‘||’, ‘&&’, do, and else
 
+[awk manual](https://www.gnu.org/software/gawk/manual/gawk)
+
 ## How to Run awk Programs
 
  Use either ‘awk 'program' files’ or ‘awk -f program-file files’ to run awk.
@@ -123,4 +125,6 @@ awk '$1 ~ /J/' inventory-shipped
 awk '$1 !~ /J/' inventory-shipped
 
 # \" : A literal double quote (should be used for string constants only)
+
+awk '/pattern1/ && /pattern2/ { print; }' # matches strings that match both pattern1 and pattern2
 ```
