@@ -99,6 +99,18 @@ awk '/This regular expression is too long, so continue it\
 
 # print every line that contains the string ‘12’ or the string ‘21’
  awk '/12/ { print $0 } ; /21/ { print $0 }' data
+
+# pretty print of awk variables
+ awk '{printf "%3s|%3d|%3d|%3d|%3s \n", FILENAME, FNR, NR, NF, $0}' data
+
+# print lines between 1 and 6 inclusive
+ awk 'NR==1, NR==6 {print $0}' data
+
+# print total nimber of feilds in data
+ awk '{sum+=NF} END {print sum}' data
+
+# print last feild in each line
+ awk '{print $NF}' data
 ```
 
 ## Running awk and gawk
