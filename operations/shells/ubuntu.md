@@ -149,3 +149,10 @@ Super key, then scroll to empty page, start new workspace
     sudo ip route show
     sudo ip route del <ip route>
 ```
+
+## How to change the number of commands remembered in bash history
+
+``` sh
+    nano ~/.bash_profile
+    export HISTSIZE=500
+```

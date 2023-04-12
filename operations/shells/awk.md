@@ -18,6 +18,8 @@ backslash continuation and comments should not mix. As soon as awk sees the ‘#
 
 You may use backslash continuation to continue a source line. Lines are automatically continued after a comma, open brace, question mark, colon, ‘||’, ‘&&’, do, and else
 
+[awk manual](https://www.gnu.org/software/gawk/manual/gawk)
+
 ## How to Run awk Programs
 
  Use either ‘awk 'program' files’ or ‘awk -f program-file files’ to run awk.
@@ -97,6 +99,18 @@ awk '/This regular expression is too long, so continue it\
 
 # print every line that contains the string ‘12’ or the string ‘21’
  awk '/12/ { print $0 } ; /21/ { print $0 }' data
+
+# pretty print of awk variables
+ awk '{printf "%3s|%3d|%3d|%3d|%3s \n", FILENAME, FNR, NR, NF, $0}' data
+
+# print lines between 1 and 6 inclusive
+ awk 'NR==1, NR==6 {print $0}' data
+
+# print total nimber of feilds in data
+ awk '{sum+=NF} END {print sum}' data
+
+# print last feild in each line
+ awk '{print $NF}' data
 ```
 
 ## Running awk and gawk
@@ -123,4 +137,6 @@ awk '$1 ~ /J/' inventory-shipped
 awk '$1 !~ /J/' inventory-shipped
 
 # \" : A literal double quote (should be used for string constants only)
+
+awk '/pattern1/ && /pattern2/ { print; }' # matches strings that match both pattern1 and pattern2
 ```
